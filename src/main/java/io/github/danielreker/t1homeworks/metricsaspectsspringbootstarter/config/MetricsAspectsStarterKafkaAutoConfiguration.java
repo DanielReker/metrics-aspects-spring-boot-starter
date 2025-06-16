@@ -1,5 +1,6 @@
 package io.github.danielreker.t1homeworks.metricsaspectsspringbootstarter.config;
 
+import io.github.danielreker.t1homeworks.metricsaspectsspringbootstarter.config.annotation.ConditionalOnAspectsMetricsEnabled;
 import io.github.danielreker.t1homeworks.metricsaspectsspringbootstarter.config.properties.MetricsAspectsProperties;
 import io.github.danielreker.t1homeworks.metricsaspectsspringbootstarter.kafka.MetricsProducer;
 import org.springframework.boot.autoconfigure.AutoConfiguration;
@@ -12,6 +13,7 @@ import org.springframework.kafka.core.KafkaTemplate;
 @AutoConfiguration
 @EnableConfigurationProperties(MetricsAspectsProperties.class)
 @ConditionalOnBean({ KafkaTemplate.class })
+@ConditionalOnAspectsMetricsEnabled
 public class MetricsAspectsStarterKafkaAutoConfiguration {
     @Bean
     @ConditionalOnMissingBean

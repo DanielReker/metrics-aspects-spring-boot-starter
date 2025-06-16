@@ -5,6 +5,8 @@ import org.springframework.boot.context.properties.ConfigurationProperties;
 @ConfigurationProperties("metrics-aspects")
 public record MetricsAspectsProperties(
         String kafkaTopic,
-        double timeLimitMs
+        double timeLimitMs,
+        boolean enableDataSourceErrorLogging,
+        boolean enableTimeLimitExceedErrorLogging
 ) {
 }
