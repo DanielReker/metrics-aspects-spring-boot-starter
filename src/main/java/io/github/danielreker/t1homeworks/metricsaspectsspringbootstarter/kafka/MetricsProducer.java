@@ -21,7 +21,7 @@ public class MetricsProducer<T> {
     public void sendMetricsError(T metricsErrorDto, String errorType) throws Exception {
         try {
             var header = new RecordHeader("errorType", Utils.utf8(errorType));
-            ProducerRecord<String, T> record = new ProducerRecord<>(properties.kafkaTopic(), metricsErrorDto);
+            ProducerRecord<String, T> record = new ProducerRecord<>(properties.getKafkaTopic(), metricsErrorDto);
             record.headers().add(header);
             kafkaTemplate.send(record).get();
         } finally {

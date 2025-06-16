@@ -1,12 +1,30 @@
 package io.github.danielreker.t1homeworks.metricsaspectsspringbootstarter.config.properties;
 
+import lombok.Getter;
+import lombok.Setter;
 import org.springframework.boot.context.properties.ConfigurationProperties;
 
 @ConfigurationProperties("metrics-aspects")
-public record MetricsAspectsProperties(
-        String kafkaTopic,
-        double timeLimitMs,
-        boolean enableDataSourceErrorLogging,
-        boolean enableTimeLimitExceedErrorLogging
-) {
+@Getter
+@Setter
+public class MetricsAspectsProperties {
+    /**
+     * Kafka topic where metrics messages are sent by starter
+     */
+    String kafkaTopic;
+
+    /**
+     * If @Metric annotated method works more that specified time limit, exceed info is logged
+     */
+    double timeLimitMs = 5;
+
+    /**
+     * Enable DataSource error logging
+     */
+    boolean enableDataSourceErrorLogging = true;
+
+    /**
+     * Enable time limit exceed error logging
+     */
+    boolean enableTimeLimitExceedErrorLogging = true;
 }

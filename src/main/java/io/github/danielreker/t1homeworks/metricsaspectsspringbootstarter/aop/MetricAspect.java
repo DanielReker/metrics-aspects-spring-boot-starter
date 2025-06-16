@@ -31,7 +31,7 @@ public class MetricAspect {
             return joinPoint.proceed();
         } finally {
             clock.stop();
-            if (clock.getTotalTimeMillis() > properties.timeLimitMs()) {
+            if (clock.getTotalTimeMillis() > properties.getTimeLimitMs()) {
                 try {
                     logService.logTimeLimitExceed(TimeLimitExceedLogDto.builder()
                             .measuredTimeMs(clock.getTotalTime(TimeUnit.MILLISECONDS))
