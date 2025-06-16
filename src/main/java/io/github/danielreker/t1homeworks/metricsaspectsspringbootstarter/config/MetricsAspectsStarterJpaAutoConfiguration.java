@@ -8,5 +8,5 @@ import org.springframework.data.jpa.repository.JpaRepository;
 @AutoConfiguration
 @ConditionalOnClass(JpaRepository.class)
 @Import({ MetricsAspectsJpaRegistrar.class })
-public class MetricsAspectsJpaAutoConfiguration {
+public class MetricsAspectsStarterJpaAutoConfiguration {
 }

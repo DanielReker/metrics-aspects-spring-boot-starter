@@ -1,0 +1,10 @@
+package io.github.danielreker.t1homeworks.metricsaspectsspringbootstarter.config;
+
+import io.github.danielreker.t1homeworks.metricsaspectsspringbootstarter.config.properties.MetricsAspectsProperties;
+import org.springframework.boot.autoconfigure.AutoConfiguration;
+import org.springframework.boot.context.properties.EnableConfigurationProperties;
+
+@AutoConfiguration
+@EnableConfigurationProperties(MetricsAspectsProperties.class)
+public class MetricsAspectsStarterCommonAutoConfiguration {
+}
