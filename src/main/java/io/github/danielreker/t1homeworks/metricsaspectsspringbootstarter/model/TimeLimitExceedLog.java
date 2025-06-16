@@ -12,7 +12,7 @@ import java.time.Instant;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "time_limit_exceed_log")
+@Table(name = "metrics_aspects_starter_time_limit_exceed_log")
 public class TimeLimitExceedLog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)

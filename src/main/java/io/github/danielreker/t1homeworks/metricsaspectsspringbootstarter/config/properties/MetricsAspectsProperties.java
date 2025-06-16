@@ -27,4 +27,9 @@ public class MetricsAspectsProperties {
      * Enable time limit exceed error logging
      */
     boolean enableTimeLimitExceedErrorLogging = true;
+
+    /**
+     * Create logging/metrics tables required by starter on application startup
+     */
+    boolean initializeDbSchema = true;
 }

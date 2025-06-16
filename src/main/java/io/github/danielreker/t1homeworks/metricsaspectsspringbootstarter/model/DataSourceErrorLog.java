@@ -9,7 +9,7 @@ import lombok.*;
 @Builder
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "data_source_error_log")
+@Table(name = "metrics_aspects_starter_data_source_error_log")
 public class DataSourceErrorLog {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
